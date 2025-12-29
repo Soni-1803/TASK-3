@@ -20,3 +20,7 @@ Once the model was trained, the next step was prediction. The trained model was 
 An important aspect of this task was that all stages of the project were implemented within a single Python program, ensuring simplicity and clarity. This approach made it easier to follow the complete workflow and understand how data flows through different stages of a data science pipeline. It also emphasized the concept of automation, where a single script can handle data processing, model training, and prediction without manual intervention.
 Through this task, I gained hands-on experience in implementing an end-to-end data science solution and developed a deeper understanding of the overall lifecycle of a data science project. I learned how to connect data collection, preprocessing, modeling, and prediction into a unified workflow. This task improved my problem-solving skills and strengthened my confidence in applying data science techniques using Python.
 Overall, Task–3 was a valuable learning experience that demonstrated how data science concepts are applied in real-world projects. It provided practical exposure to the complete data science pipeline and reinforced the importance of structured workflows, clean data, and well-trained models in delivering accurate and meaningful results.
+
+#OUTPUT
+
+<img width="319" height="241" alt="Image" src="https://github.com/user-attachments/assets/284dfe13-0c25-4ddb-9b86-f0d0b053e3aa" />
