@@ -1,0 +1,91 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "W5TcdKAxDcjh",
+        "outputId": "1df3d2ef-c282-4984-dfba-8a8acbd5cc0f"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Dataset:\n",
+            "   Study_Hours  Marks\n",
+            "0            1     35\n",
+            "1            2     40\n",
+            "2            3     50\n",
+            "3            4     55\n",
+            "4            5     65\n",
+            "5            6     70\n",
+            "6            7     78\n",
+            "7            8     85\n",
+            "\n",
+            "Prediction Result:\n",
+            "If a student studies 6 hours, predicted marks = 70\n"
+          ]
+        },
+        {
+          "output_type": "stream",
+          "name": "stderr",
+          "text": [
+            "/usr/local/lib/python3.12/dist-packages/sklearn/utils/validation.py:2739: UserWarning: X does not have valid feature names, but LinearRegression was fitted with feature names\n",
+            "  warnings.warn(\n"
+          ]
+        }
+      ],
+      "source": [
+        "# TASK 3: END-TO-END DATA SCIENCE PROJECT (Single Program)\n",
+        "\n",
+        "# Step 1: Import libraries\n",
+        "import pandas as pd\n",
+        "from sklearn.linear_model import LinearRegression\n",
+        "\n",
+        "# Step 2: Data Collection\n",
+        "data = {\n",
+        "    'Study_Hours': [1, 2, 3, 4, 5, 6, 7, 8],\n",
+        "    'Marks': [35, 40, 50, 55, 65, 70, 78, 85]\n",
+        "}\n",
+        "\n",
+        "df = pd.DataFrame(data)\n",
+        "print(\"Dataset:\")\n",
+        "print(df)\n",
+        "\n",
+        "# Step 3: Data Preprocessing\n",
+        "X = df[['Study_Hours']]\n",
+        "y = df['Marks']\n",
+        "\n",
+        "# Step 4: Model Training\n",
+        "model = LinearRegression()\n",
+        "model.fit(X, y)\n",
+        "\n",
+        "# Step 5: Prediction\n",
+        "hours = 6\n",
+        "predicted_marks = model.predict([[hours]])\n",
+        "\n",
+        "# Step 6: Output\n",
+        "print(\"\\nPrediction Result:\")\n",
+        "print(f\"If a student studies {hours} hours, predicted marks = {int(predicted_marks[0])}\")"
+      ]
+    }
+  ]
+}
